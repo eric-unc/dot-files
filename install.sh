@@ -1,3 +1,4 @@
 cp .tmux.conf ~
 cp .vimrc ~
+./git.sh
 
