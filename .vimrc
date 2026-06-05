@@ -3,3 +3,5 @@
 :set relativenumber
 :set mouse=a
 :set noswapfile
+:set ignorecase
+:set smartcase
