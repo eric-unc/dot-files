@@ -1,3 +1,4 @@
+cp .bash_aliases ~
 cp .gdbinit ~
 cp .tmux.conf ~
 cp .vimrc ~
