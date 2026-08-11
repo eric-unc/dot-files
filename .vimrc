@@ -6,6 +6,17 @@
 :set ignorecase
 :set smartcase
 
+" highlight trailing whitespace (and spaces before tabs) in red
+highlight ExtraWhitespace ctermbg=red guibg=red
+augroup extrawhitespace
+  autocmd!
+  autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+  " don't nag while you're mid-typing at the end of a line
+  autocmd BufWinEnter,InsertLeave * match ExtraWhitespace /\s\+$/
+  autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+  autocmd BufWinLeave * call clearmatches()
+augroup END
+
 " reload files changed on disk (e.g. by an agent editing them under you)
 :set autoread
 :set updatetime=250
