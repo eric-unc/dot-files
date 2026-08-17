@@ -1,6 +1,14 @@
+" load vim's defaults.vim -- having a ~/.vimrc otherwise suppresses it,
+" costing incsearch, wildmenu, history=200 and 'filetype indent on'
+unlet! skip_defaults_vim
+silent! source $VIMRUNTIME/defaults.vim
+
 :set tabstop=4
+:set shiftwidth=4
+:set softtabstop=4
 :set number
 :set relativenumber
+" after defaults.vim, which sets mouse=nvi
 :set mouse=a
 :set noswapfile
 :set ignorecase
